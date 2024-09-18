@@ -1,9 +1,9 @@
 <div>
   <app-header> Agregar Estudiante </app-header>
 </div>
-<div>
+<mat-card>
   <app-formulario (nuevoEstudiante)="agregarEstudiante($event)"></app-formulario>
-</div>
+</mat-card>
 
 <div class="student-cards">
   <mat-card *ngFor="let student of studentArray" class="student-card">
