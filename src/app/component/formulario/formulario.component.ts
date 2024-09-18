@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validator, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario',
@@ -17,8 +17,8 @@ export class FormularioComponent implements OnInit {
 
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
-      nombre: [''],
-      asignaturas: ['']
+      nombre: ['', Validators.required],
+      asignaturas: ['', Validators.required]
     });
   }
 
