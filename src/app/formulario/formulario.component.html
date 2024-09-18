@@ -1,0 +1,15 @@
+<form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" formControlName="nombre">
+      <!-- Mensaje de error si el campo "nombre" es inválido y ha sido tocado -->
+      <div *ngIf="formulario.get('nombre').invalid && formulario.get('nombre').touched">
+      </div>
+    </div>
+    <div>
+      <label for="asignaturas">Asignaturas:</label>
+      <input type="text" id="asignaturas" formControlName="asignaturas">
+    </div>
+    <button type="submit" [disabled]="formulario.invalid">Enviar</button>
+  </form>
+  
