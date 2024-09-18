@@ -1,3 +1,4 @@
+import { HeaderComponent } from '../../component/header/header.component';
 import { Component, OnInit } from '@angular/core';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
@@ -7,8 +8,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { Students } from '../models/students';
+import { Students } from '../../models/students';
 import { FormularioComponent } from '../formulario/formulario.component';
+import { FooterComponent } from '../../component/footer/footer.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -23,7 +25,9 @@ import { FormularioComponent } from '../formulario/formulario.component';
     MatButtonModule,
     MatCardModule, 
     CommonModule,
-    FormularioComponent
+    FormularioComponent,
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class DashboardComponent implements OnInit {
